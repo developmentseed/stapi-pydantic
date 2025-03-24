@@ -1,0 +1,51 @@
+site_name: stapi-pydantic
+site_author: Pete Gadomski
+site_description: Pydantic models for the Satellite Tasking API (STAPI) Specification
+site_url: https://developmentseed.org/stapi-pydantic/
+repo_name: devseed/stapi-pydantic
+repo_url: https://github.com/developmentseed/stapi-pydantic
+
+extra:
+  social:
+    - icon: "fontawesome/brands/github"
+      link: "https://github.com/developmentseed"
+    - icon: "fontawesome/brands/linkedin"
+      link: "https://www.linkedin.com/company/development-seed"
+  version:
+    alias: true
+    provider: mike
+
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo_no_text.png
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: default
+      accent: deep orange
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: default
+      accent: deep orange
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+extra_css:
+  - overrides/stylesheets/extra.css
+
+plugins:
+  - mike:
+      alias_type: "copy"
+      canonical_version: "latest"
+  - mkdocstrings
