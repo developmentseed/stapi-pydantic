@@ -1,8 +1,8 @@
-from stapi_pydantic import CreateOrder
+from stapi_pydantic import Request
 
 
 def test_create_order() -> None:
-    CreateOrder.model_validate(
+    Request.model_validate(
         {
             "datetime": "2025-03-24T00:00:00Z/..",
             "productId": "42",
@@ -12,7 +12,7 @@ def test_create_order() -> None:
 
 
 def test_create_order_with_filter() -> None:
-    CreateOrder.model_validate(
+    Request.model_validate(
         {
             "datetime": "2025-03-24T00:00:00Z/..",
             "productId": "42",
